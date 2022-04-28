@@ -12,5 +12,8 @@
   },
   "scripts": {
     "test": "mocha test/**/*.js"
+  },
+  "dependencies": {
+    "nvm": "^0.0.4"
   }
 }
