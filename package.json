@@ -1,0 +1,16 @@
+{
+  "name": "codename_v",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/jacob-hanbeen-kim/codename_v.git",
+  "author": "jacob-hanbeen-kim <kjkjkjhan424@gmail.com>",
+  "license": "MIT",
+  "type": "module",
+  "devDependencies": {
+    "chai": "^4.3.6",
+    "mocha": "^9.2.2"
+  },
+  "scripts": {
+    "test": "mocha test/**/*.js"
+  }
+}
