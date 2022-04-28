@@ -9,7 +9,37 @@ describe('reverse string', () => {
         console.log(`it took ${t1 - t0} milliseconds.`);
     })
 
-    it('big array', () => {
+    it('len 1,000 array', () => {
+        const t0 = performance.now();
+        let array = Array(1000).fill('a');
+        array[1] = 'b';
+
+        expect(array.reverse()).to.eql(reverseString(array));
+        const t1 = performance.now();
+        console.log(`it took ${t1 - t0} milliseconds.`);
+    })
+
+    it('len 10,000 array', () => {
+        const t0 = performance.now();
+        let array = Array(10000).fill('a');
+        array[1] = 'b';
+
+        expect(array.reverse()).to.eql(reverseString(array));
+        const t1 = performance.now();
+        console.log(`it took ${t1 - t0} milliseconds.`);
+    })
+
+    it('len 100,000 array', () => {
+        const t0 = performance.now();
+        let array = Array(1000 * 100).fill('a');
+        array[1] = 'b';
+
+        expect(array.reverse()).to.eql(reverseString(array));
+        const t1 = performance.now();
+        console.log(`it took ${t1 - t0} milliseconds.`);
+    })
+
+    it('len 1,000,000 array', () => {
         const t0 = performance.now();
         let array = Array(1000 * 1000).fill('a');
         array[1] = 'b';
