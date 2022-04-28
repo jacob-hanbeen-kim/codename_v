@@ -11,7 +11,7 @@ describe('reverse string', () => {
 
     it('big array', () => {
         const t0 = performance.now();
-        let array = new Array[1000 * 1000].fill('a');
+        let array = Array(1000 * 1000).fill('a');
         array[1] = 'b';
 
         expect(array.reverse()).to.eql(reverseString(array));
