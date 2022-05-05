@@ -2,7 +2,22 @@
  * @param {string} columnTitle
  * @return {number}
  */
+// More readable solution
 export var titleToNumber = function (columnTitle) {
+    // reverse string
+    columnTitle = columnTitle.split("").reverse().join("");
+
+    let columnNum = 0;
+    for (let i = 0; i < columnTitle.length; i++) {
+        let code = columnTitle.charCodeAt(i) - 64;
+        columnNum += code * Math.pow(26, i)
+    }
+
+    return columnNum;
+};
+
+// Initial Approach
+export var titleToNumber2 = function (columnTitle) {
     // A = 0 * 26 + 1
     // Z = 0 * 26 + 26
     // AA = 27 = 1 * 26 + 1
@@ -19,7 +34,7 @@ export var titleToNumber = function (columnTitle) {
     let columnNum = 0;
     for (let i = 0; i < columnTitle.length; i++) {
         let code = columnTitle.charCodeAt(i) - bound;
-        columnNum += code * (26 ** (columnTitle.length - 1 - i))
+        columnNum += code * Math.pow(26, columnTitle.length - 1 - i)
     }
 
     return columnNum;
