@@ -1,7 +1,7 @@
 import { ListNode, reverseList } from '../../src/ReverseLinkedList/reverseLinkedList.js'
 import { expect } from 'chai';
 
-describe.only('reverse linked list', () => {
+describe('reverse linked list', () => {
     it('[1,2,3,4,5]', () => {
         const t0 = performance.now();
         let next = null;

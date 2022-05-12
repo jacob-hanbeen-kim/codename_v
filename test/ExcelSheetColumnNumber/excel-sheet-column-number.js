@@ -1,7 +1,7 @@
 import { titleToNumber } from '../../src/ExcelSheetColumnNumber/excelSheetColumnNumber.js'
 import { expect } from 'chai';
 
-describe('excel sheet column number', () => {
+describe.only('excel sheet column number', () => {
     it('A', () => {
         const t0 = performance.now();
         expect(1).to.eql(titleToNumber('A'));

@@ -20,7 +20,7 @@ export var majorityElement = function (nums) {
 
 // Naive
 /**
- * Takes O(n) time and O(n) space complexity
+ * Takes O(n) time and O(n/2) = O(n) space complexity
  * @param {number[]} nums
  * @return {number}
  */

@@ -39,3 +39,29 @@ export var titleToNumber2 = function (columnTitle) {
 
     return columnNum;
 };
+
+
+// O(n + m)
+export var titleToNumber3 = function (columnTitle) {
+    let alphabet = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
+    let alphabetToNum = {};
+    alphabet.map((e, i) => {
+        alphabetToNum[e] = i + 1;
+    })
+
+    let totalNumb = 0;
+    let base = 1;
+
+    // ZY
+    let charArray = columnTitle.split('');
+    for (let i = charArray.length - 1; i >= 0; i--) {
+        let char = charArray[i]; //Y
+        let numb = base * alphabetToNum[char] // 25
+
+        totalNumb = totalNumb + numb;
+        base *= 26;
+    }
+
+    console.log(totalNumb);
+    return totalNumb;
+}
