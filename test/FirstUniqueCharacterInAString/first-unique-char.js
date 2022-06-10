@@ -7,7 +7,6 @@ describe('first unique character in a string', () => {
         ["leetcode", 0],
         ["loveleetcode", 2],
         ["aabb", -1]
-
     ]
 
     tests.forEach(function(test) {
@@ -18,4 +17,5 @@ describe('first unique character in a string', () => {
             console.log(`it took ${t1 - t0} milliseconds.`);        
         })
     })
+    
 })
